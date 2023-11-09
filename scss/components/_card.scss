@@ -1,0 +1,79 @@
+// ========================== //
+//           CARD             //
+// ========================== //
+
+@use "../base" as *;
+@use "sass:map";
+
+//--CARD----//
+/*--START CARD--------------------*/
+.c {
+  @include grid($gap: $ss-3);
+  grid-row: 2;
+  width: 100%;
+  padding: $ss-6;
+  background-color: $theme-color-card;
+  border-radius: $ss-3;
+  box-shadow: $shadow-3;
+  &-overlay {
+    position: relative;
+    &-image {
+      border-radius: $ss-3;
+    }
+    &:hover {
+      &::before {
+        content: url("/images/icon-view.svg");
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: hsla(178, 100%, 50%, 0.4);
+        border-radius: $ss-3;
+      }
+    }
+  }
+  &-title {
+    @include font-style(h4);
+    &:hover {
+      cursor: pointer;
+      color: $theme-primary-200;
+    }
+  }
+  &-description {
+    @include mq(min, sm) {
+      font-size: 18px;
+    }
+  }
+  &-grid {
+    @include grid(1fr 1fr, $gap: $ss-5);
+  }
+  &-price {
+    @include grid(auto auto, $gap: $ss-2);
+    justify-content: start;
+    &-value {
+      @include font-style(sm, regular);
+      color: $theme-primary-200;
+    }
+  }
+  &-days {
+    @include grid(auto auto, $gap: $ss-2);
+    align-items: center;
+    justify-content: end;
+  }
+  &-line {
+    border-block: 1px solid $theme-color-line;
+  }
+  &-user {
+    @include grid(auto 1fr, $gap: $ss-4);
+    align-items: center;
+    &-avatar {
+      width: 40px;
+      border: 1px solid $theme-neutral-100;
+      border-radius: 50%;
+      box-shadow: $shadow-diffuse;
+    }
+  }
+}
+/*--END CARD--------------------*/

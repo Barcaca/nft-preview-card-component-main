@@ -1,0 +1,51 @@
+// ========================== //
+//           RESET            //
+// ========================== //
+@use "sass:map";
+@use "variables" as *;
+@use "mixins" as *;
+@use "functions" as *;
+
+/*--START RESET--------------------*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  border: 0 solid transparent;
+}
+body {
+  font-family: $ff-sans;
+  color: $theme-primary-100;
+  background-color: $theme-color-bg;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $fw-600;
+  color: $theme-neutral-100;
+}
+p {
+  @include font-style(base, light);
+}
+a {
+  color: $theme-neutral-100;
+  &:hover {
+    color: $theme-primary-200;
+  }
+}
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*--END RESET--------------------*/
