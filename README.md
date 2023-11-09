@@ -26,8 +26,8 @@ Users should be able to:
 ![](images/screenshot.png)
 
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Front End Mentor](https://www.frontendmentor.io/solutions/nft-preview-card-component-sassscss-VmVbrAYKmq)
+- Live Site URL: [Vercel App](https://nft-preview-card-component-main-three-steel.vercel.app)
 ## My process
 
 ### Built with
